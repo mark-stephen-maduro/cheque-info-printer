@@ -240,19 +240,33 @@
         margin-top: 20px;
       }
       @media print {
-        body * {
-          visibility: hidden;
+        html, body {
+          width: 215mm;
+          height: 89mm;
+          margin: 0 !important;
+          padding: 0 !important;
+          overflow: hidden !important;
         }
-        #preview,
-        #preview * {
-          visibility: visible;
+        body * {
+          visibility: hidden !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        #preview, #preview * {
+          visibility: visible !important;
         }
         #preview {
-          position: absolute;
-          left: 0;
-          top: 0;
+          position: absolute !important;
+          left: 0 !important;
+          top: 0 !important;
           border: none !important;
           box-shadow: none !important;
+          width: 215mm !important;
+          height: 89mm !important;
+          min-width: unset !important;
+          min-height: unset !important;
+          max-width: unset !important;
+          max-height: unset !important;
         }
         .cheque-field {
           border: none !important;
@@ -297,7 +311,7 @@
       /* Default cheque size for printing (8" x 3.5") */
       @page {
         size: 215mm 89mm;
-        margin: 0;
+        margin: 0 !important;
       }
     </style>
   </head>
