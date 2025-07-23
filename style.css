@@ -297,7 +297,7 @@ form#chequeForm button[type="button"]:hover {
     box-sizing: border-box;
   }
 }
-/* Default cheque size for printing (8" x 3.5") */
+/* Default cheque size for printing (8.5" x 3.5") */
 @page {
   size: 215mm 89mm;
   margin: 0 !important;
